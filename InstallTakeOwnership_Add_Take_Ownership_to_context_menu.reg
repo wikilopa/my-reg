@@ -5,8 +5,6 @@ Windows Registry Editor Version 5.00
 ; Modified on: August 29th 2016
 ; Tutorial: http://www.eightforums.com/tutorials/2814-take-ownership-add-context-menu-windows-8-a.html
 
-
-
 [-HKEY_CLASSES_ROOT\*\shell\runas]
 
 [HKEY_CLASSES_ROOT\*\shell\runas]
@@ -18,8 +16,6 @@ Windows Registry Editor Version 5.00
 [HKEY_CLASSES_ROOT\*\shell\runas\command]
 @="cmd.exe /c takeown /f \"%1\" && icacls \"%1\" /grant *S-1-3-4:F /c /l"
 "IsolatedCommand"="cmd.exe /c takeown /f \"%1\" && icacls \"%1\" /grant *S-1-3-4:F /c /l"
-
-
 
 [-HKEY_CLASSES_ROOT\Directory\shell\runas]
 
@@ -34,8 +30,6 @@ Windows Registry Editor Version 5.00
 @="cmd.exe /c takeown /f \"%1\" /r /d y && icacls \"%1\" /grant *S-1-3-4:F /t /c /l /q"
 "IsolatedCommand"="cmd.exe /c takeown /f \"%1\" /r /d y && icacls \"%1\" /grant *S-1-3-4:F /t /c /l /q"
 
-
-
 [-HKEY_CLASSES_ROOT\dllfile\shell\runas]
 
 [HKEY_CLASSES_ROOT\dllfile\shell\runas]
@@ -47,8 +41,6 @@ Windows Registry Editor Version 5.00
 [HKEY_CLASSES_ROOT\dllfile\shell\runas\command]
 @="cmd.exe /c takeown /f \"%1\" && icacls \"%1\" /grant *S-1-3-4:F /c /l"
 "IsolatedCommand"="cmd.exe /c takeown /f \"%1\" && icacls \"%1\" /grant *S-1-3-4:F /c /l"
-
-
 
 [-HKEY_CLASSES_ROOT\Drive\shell\runas]
 
@@ -62,9 +54,6 @@ Windows Registry Editor Version 5.00
 [HKEY_CLASSES_ROOT\Drive\shell\runas\command]
 @="cmd.exe /c takeown /f \"%1\" /r /d y && icacls \"%1\" /grant *S-1-5-32-544:F /t /c /l /q"
 "IsolatedCommand"="cmd.exe /c takeown /f \"%1\" /r /d y && icacls \"%1\" /grant *S-1-3-4:F /t /c /l /q"
-
-
-
 
 [-HKEY_CLASSES_ROOT\exefile\shell\runas]
 
